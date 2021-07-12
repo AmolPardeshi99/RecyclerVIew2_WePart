@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class StudentAdapter extends RecyclerView.Adapter<StudentviewHolder> {
     @NonNull
-    private ArrayList<StudentModel> studentList;
+    ArrayList<StudentModel> studentList;
     private ItemClickListener itemClickListener;
 
     public StudentAdapter(ArrayList<StudentModel> studentList,
@@ -22,7 +22,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentviewHolder> {
     }
     @Override
     public StudentviewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_main,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
         return new StudentviewHolder(view,itemClickListener);
     }
 
